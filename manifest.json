@@ -1,0 +1,13 @@
+{
+  "name": "Domain e-mail generator",
+  "version": "1.0",
+  "description": "Generates an e-mail address for the current page for your custom e-mail domain!",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*", "storage", "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+  <title>Set Page Color Popup</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 30px;
+      color: #343434;
+      background-color: #ffffff;
+      /*margin: 0px !important;*/
+      border-radius: 10px;
+    }
+
+    .copy-container {
+      margin: 10px 0;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    input {
+      font-size: 14px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      width: 300px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .btn-copy {
+      background: #b855ff;
+      color: #fff;
+      border-radius: 7px;
+      box-shadow: 0 5px #9e49db;
+      width: 100%;
+      padding: 15px 0;
+      cursor: pointer;
+      display: inline-block;
+      /*margin: 15px 0 0;*/
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-decoration: none;
+      outline: none;
+      position: relative;
+      transition: all 0.3s;
+      text-align: center;
+    }
+
+    .btn-copy:hover {
+      background: #ba78ff;
+    }
+
+    .link {
+      margin: 15px 0 0;
+      font-size: 14px;
+      text-align: right;
+      display: block;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 25px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .closed::before {
+      content: '[+] ';
+    }
+
+    .open::before {
+      content: '[-] ';
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <h1>Domain e-mail generator v1.0</h1>
+  <p>Generates an e-mail address for your custom e-mail domain, based on the domain of the currently active tab.</p>
+  <div class="copy-container">
+    <input id="email" type="text">
+    <a href="#" class="js-copy btn-copy">Copy</a>
+  </div>
+  <a href="" class="link js-toggle-options closed">options</a>
+  <div class="js-options options hidden">
+    <label for="domain">E-mail domain</label>
+    <input id="domain" type="text" placeholder="example.com">
+  </div>
+</body>
+</html>
